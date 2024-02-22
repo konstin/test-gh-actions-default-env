@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - run: ls /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages || true
+      - run: ls /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
       - run: .cargo/bin/uv pip lists
