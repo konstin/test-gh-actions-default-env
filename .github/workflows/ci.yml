@@ -8,11 +8,10 @@ on:
 
 jobs:
   test:
-    name: "cargo fmt"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
       - run: ls /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages || true
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
-      - run: uv pip lists
+      - run: .cargo/bin/uv pip lists
